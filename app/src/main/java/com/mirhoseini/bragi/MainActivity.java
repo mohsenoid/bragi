@@ -29,7 +29,7 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity implements BaseView, NumbersFragment.OnListFragmentInteractionListener {
 
-    static final String TAG_NUMBERS_FRAGMENT = "numbers_fragment";
+    public static final String TAG_NUMBERS_FRAGMENT = "numbers_fragment";
 
     // injecting dependencies via Dagger
     @Inject
@@ -83,11 +83,6 @@ public class MainActivity extends BaseActivity implements BaseView, NumbersFragm
     @Override
     public void showMessage(String message) {
         Toast.makeText(context, message, Toast.LENGTH_LONG).show();
-    }
-
-    @Override
-    public void showError(Throwable throwable) {
-        showMessage(throwable.getMessage());
     }
 
     @Override

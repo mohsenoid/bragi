@@ -157,13 +157,6 @@ public class NumbersFragment extends BaseFragment implements NumbersView {
     }
 
     @Override
-    public void showError(Throwable throwable) {
-        if (null != listener) {
-            listener.showError(throwable);
-        }
-    }
-
-    @Override
     public void showProgress() {
         if (null != listener) {
             listener.showProgress();
