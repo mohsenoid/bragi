@@ -10,6 +10,9 @@ import rx.schedulers.Schedulers;
  * Created by Mohsen on 18/11/2016.
  */
 
+/**
+ * Application Scheduler Provider for RxJava using RxAndroid {@link AndroidSchedulers}
+ */
 public class AppSchedulerProvider implements SchedulerProvider {
 
     @Inject

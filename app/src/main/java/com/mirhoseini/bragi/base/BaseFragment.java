@@ -21,6 +21,12 @@ public abstract class BaseFragment extends Fragment {
         // can be used for general purpose in all Fragments of Application
     }
 
+    /**
+     * An abstract method which inject dependencies to Fragment
+     *
+     * @param component Application Component
+     * @param context   Fragment context
+     */
     protected abstract void injectDependencies(ApplicationComponent component, Context context);
 
 }

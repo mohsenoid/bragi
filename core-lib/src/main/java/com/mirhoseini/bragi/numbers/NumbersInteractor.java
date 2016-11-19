@@ -1,7 +1,8 @@
 package com.mirhoseini.bragi.numbers;
 
 import com.mirhoseini.bragi.base.BaseInteractor;
-import com.mirhoseini.bragi.domain.NumbersResponse;
+
+import net.bragi.foo.model.NumbersResponse;
 
 import rx.Observable;
 

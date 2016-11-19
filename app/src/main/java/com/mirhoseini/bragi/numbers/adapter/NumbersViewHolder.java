@@ -31,16 +31,37 @@ public class NumbersViewHolder extends RecyclerView.ViewHolder {
         binding = DataBindingUtil.bind(view);
     }
 
-    public static NumbersViewHolder makeViewHolder(ViewGroup parent, NumberRecord.RecordTypes recordType) {
+    /**
+     * Make {@link android.support.v7.widget.RecyclerView.ViewHolder} according to {@link com.mirhoseini.bragi.numbers.adapter.model.NumberRecord.RecordTypes}
+     *
+     * @param parent     parent {@link ViewGroup}
+     * @param recordType record type {@link com.mirhoseini.bragi.numbers.adapter.model.NumberRecord.RecordTypes}
+     * @return
+     */
+    static NumbersViewHolder makeViewHolder(ViewGroup parent, NumberRecord.RecordTypes recordType) {
         View view = getLayoutView(parent, recordType);
         return new NumbersViewHolder(view, recordType);
     }
 
+    /**
+     * Inflate {@link View} according to {@link com.mirhoseini.bragi.numbers.adapter.model.NumberRecord.RecordTypes}
+     *
+     * @param parent     parent {@link ViewGroup}
+     * @param recordType record type {@link com.mirhoseini.bragi.numbers.adapter.model.NumberRecord.RecordTypes}
+     * @return
+     */
     static View getLayoutView(ViewGroup parent, NumberRecord.RecordTypes recordType) {
         int layoutId = getLayoutId(recordType);
         return LayoutInflater.from(parent.getContext()).inflate(layoutId, null);
     }
 
+
+    /**
+     * return layout id according to {@link com.mirhoseini.bragi.numbers.adapter.model.NumberRecord.RecordTypes}
+     *
+     * @param recordType record type {@link com.mirhoseini.bragi.numbers.adapter.model.NumberRecord.RecordTypes}
+     * @return layout id
+     */
     static int getLayoutId(NumberRecord.RecordTypes recordType) {
         switch (recordType) {
             case HEADER:

@@ -6,6 +6,9 @@ import com.mirhoseini.bragi.domain.model.Items;
  * Created by Mohsen on 18/11/2016.
  */
 
+/**
+ * Model which holds Items row values
+ */
 public class NumberItem extends Number {
     Items item;
     boolean isChecked;

@@ -37,6 +37,12 @@ public class NumbersRecyclerViewAdapter extends RecyclerView.Adapter<NumbersView
         this.records = mapDataListToNumberRecord(new ArrayList<>(dataList));
     }
 
+    /**
+     * Map ArrayList of {@link DataModel} to ArrayList of {@link NumberRecord}
+     *
+     * @param dataList ArrayList of {@link DataModel}
+     * @return ArrayList of {@link NumberRecord}
+     */
     private ArrayList<NumberRecord> mapDataListToNumberRecord(ArrayList<DataModel> dataList) {
         ArrayList<NumberRecord> result = new ArrayList<>();
 
@@ -74,12 +80,9 @@ public class NumbersRecyclerViewAdapter extends RecyclerView.Adapter<NumbersView
 
         holder.setData(number);
 
-        Observable.create(new Observable.OnSubscribe<Number>() {
-            @Override
-            public void call(Subscriber<? super Number> subscriber) {
-                holder.getView().setOnClickListener(view -> subscriber.onNext(holder.getData()));
-            }
-        }).subscribe(notify::onNext);
+        // handle click on records
+        Observable.create((Subscriber<? super Number> subscriber) -> holder.getView().setOnClickListener(view -> subscriber.onNext(holder.getData())))
+                .subscribe(notify::onNext);
     }
 
     public Observable<Number> asObservable() {

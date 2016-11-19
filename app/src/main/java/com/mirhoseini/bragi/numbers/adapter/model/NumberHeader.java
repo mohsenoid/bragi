@@ -6,6 +6,9 @@ import com.mirhoseini.bragi.domain.model.Sections;
  * Created by Mohsen on 18/11/2016.
  */
 
+/**
+ * Model which holds Headers row values
+ */
 public class NumberHeader extends Number {
     Sections section;
 

@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import com.mirhoseini.bragi.ApplicationComponent;
 import com.mirhoseini.bragi.BragiApplication;
 
-
 /**
  * Created by Mohsen on 18/11/2016.
  */
@@ -22,6 +21,11 @@ public abstract class BaseActivity extends AppCompatActivity {
         // can be used for general purpose in all Activities of Application
     }
 
+    /**
+     * An abstract method which inject dependencies to Activity
+     *
+     * @param component Application Component
+     */
     protected abstract void injectDependencies(ApplicationComponent component);
 
 }

@@ -1,9 +1,10 @@
 package com.mirhoseini.bragi.numbers;
 
 
-import com.mirhoseini.bragi.domain.NumbersResponse;
 import com.mirhoseini.bragi.domain.client.BragiApi;
 import com.mirhoseini.bragi.util.SchedulerProvider;
+
+import net.bragi.foo.model.NumbersResponse;
 
 import javax.inject.Inject;
 

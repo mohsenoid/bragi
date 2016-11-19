@@ -13,6 +13,9 @@ import dagger.Component;
  * Created by Mohsen on 18/11/2016.
  */
 
+/**
+ * Application SubComponent which inject {@link com.mirhoseini.bragi.ApplicationModule} members into {@link MainActivity}
+ */
 @Singleton
 @Component(modules = {
         AndroidModule.class,

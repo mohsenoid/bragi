@@ -10,6 +10,9 @@ import javax.inject.Inject;
  * Created by Mohsen on 18/11/2016.
  */
 
+/**
+ * Application State Manager which represent states required by core-lib module
+ */
 public class StateManagerImpl implements StateManager {
 
     private Context context;

@@ -1,6 +1,6 @@
 package com.mirhoseini.bragi.domain.client;
 
-import com.mirhoseini.bragi.domain.NumbersResponse;
+import net.bragi.foo.model.NumbersResponse;
 
 import retrofit2.http.GET;
 import rx.Observable;
@@ -14,4 +14,5 @@ public interface BragiApi {
     // http://foo.bragi.net/numbers.json
     @GET("numbers.json")
     Observable<NumbersResponse> getNumbers();
+
 }

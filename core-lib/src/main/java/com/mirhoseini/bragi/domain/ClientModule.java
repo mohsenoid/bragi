@@ -23,6 +23,9 @@ import okhttp3.logging.HttpLoggingInterceptor;
  * Created by Mohsen on 18/11/2016.
  */
 
+/**
+ * Module which provide objects required for creating {@link OkHttpClient} including {@link Interceptor}s
+ */
 @Module
 public class ClientModule {
     private static final String HTTP_CACHE_PATH = "http-cache";

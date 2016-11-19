@@ -22,6 +22,9 @@ import okhttp3.HttpUrl;
  * Created by Mohsen on 18/11/2016.
  */
 
+/**
+ * Module which provide Application objects and variables required during whole application lifecycle
+ */
 @Module
 public class ApplicationModule {
     @Provides

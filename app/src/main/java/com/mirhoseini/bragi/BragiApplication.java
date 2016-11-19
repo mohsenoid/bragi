@@ -6,6 +6,9 @@ import android.app.Application;
  * Created by Mohsen on 18/11/2016.
  */
 
+/**
+ * Base Application class which maintain global application state and used for holding {@link ApplicationComponent}
+ */
 public abstract class BragiApplication extends Application {
 
     private static ApplicationComponent component;

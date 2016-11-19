@@ -7,6 +7,9 @@ import dagger.Provides;
  * Created by Mohsen on 18/11/2016.
  */
 
+/**
+ * Module which provide Numbers MVP objects
+ */
 @Module
 class NumbersModule {
 

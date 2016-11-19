@@ -1,8 +1,9 @@
 package com.mirhoseini.bragi.numbers;
 
-import com.mirhoseini.bragi.domain.NumbersResponse;
 import com.mirhoseini.bragi.domain.model.DataModel;
 import com.mirhoseini.bragi.util.SchedulerProvider;
+
+import net.bragi.foo.model.NumbersResponse;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -78,6 +79,12 @@ class NumbersPresenterImpl implements NumbersPresenter {
                 );
     }
 
+    /**
+     * Method which Map {@link NumbersResponse} received from API to {@link DataModel}
+     *
+     * @param numbersResponse numbers response received from API
+     * @return mapped values
+     */
     private List<DataModel> mapNumbersResponseToDataList(NumbersResponse numbersResponse) {
         List<DataModel> dataModel = new ArrayList<>();
 
@@ -88,6 +95,12 @@ class NumbersPresenterImpl implements NumbersPresenter {
         return dataModel;
     }
 
+    /**
+     * Method which Sort {@link DataModel} according to {@link com.mirhoseini.bragi.domain.model.Sections} and {@link com.mirhoseini.bragi.domain.model.Items}
+     *
+     * @param dataList List of unsorted {@link DataModel}
+     * @return ArrayList of sorted {@link DataModel}
+     */
     private ArrayList<DataModel> sortDataList(List<DataModel> dataList) {
         ArrayList<DataModel> result = new ArrayList<>(dataList);
 

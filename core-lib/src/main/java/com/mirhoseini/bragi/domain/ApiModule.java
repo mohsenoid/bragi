@@ -19,6 +19,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by Mohsen on 18/11/2016.
  */
 
+/**
+ * Module which provide objects required for creating {@link Retrofit} using {@link BragiApi}
+ */
 @Module
 public class ApiModule {
 

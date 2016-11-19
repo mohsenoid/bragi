@@ -4,6 +4,9 @@ package com.mirhoseini.bragi.util;
  * Created by Mohsen on 18/11/2016.
  */
 
+/**
+ * core-lib Constants
+ */
 public abstract class Constants {
 
     public static final String BASE_URL = "http://foo.bragi.net/";

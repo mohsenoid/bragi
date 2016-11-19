@@ -58,6 +58,11 @@ public class NumbersFragment extends BaseFragment implements NumbersView {
     public NumbersFragment() {
     }
 
+    /**
+     * This method could be used when we have to pass some Args to fragment using {@link Bundle}
+     *
+     * @return new instance of NumbersFragment
+     */
     public static NumbersFragment newInstance() {
         NumbersFragment fragment = new NumbersFragment();
         return fragment;
@@ -67,6 +72,7 @@ public class NumbersFragment extends BaseFragment implements NumbersView {
     public void onAttach(Context context) {
         super.onAttach(context);
 
+        // subscribe to adapter's records click
         subscriptions.add(
                 adapter.asObservable()
                         .filter(number -> null != listener)
@@ -78,6 +84,7 @@ public class NumbersFragment extends BaseFragment implements NumbersView {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_numbers, container, false);
 
+        // inject views using ButterKnife
         ButterKnife.bind(this, view);
 
         initRecyclerView();

@@ -10,6 +10,9 @@ import dagger.Provides;
  * Created by Mohsen on 18/11/2016.
  */
 
+/**
+ * Module which extends {@link NumbersModule} and provide Android objects required by {@link NumbersFragment}
+ */
 @Module
 public class AppNumbersModule extends NumbersModule {
     private final Context context;
@@ -39,5 +42,4 @@ public class AppNumbersModule extends NumbersModule {
     public LinearLayoutManager provideLayoutManager() {
         return new LinearLayoutManager(context);
     }
-
 }

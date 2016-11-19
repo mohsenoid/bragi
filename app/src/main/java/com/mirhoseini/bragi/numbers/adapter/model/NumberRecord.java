@@ -4,6 +4,9 @@ package com.mirhoseini.bragi.numbers.adapter.model;
  * Created by Mohsen on 18/11/2016.
  */
 
+/**
+ * Model which holds all rows values including their types using {@link RecordTypes}
+ */
 public class NumberRecord {
 
     RecordTypes recordType;

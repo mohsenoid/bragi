@@ -12,6 +12,9 @@ import dagger.Provides;
  * Created by Mohsen on 18/11/2016.
  */
 
+/**
+ * Module which provide Android objects required during whole application lifecycle
+ */
 @Module
 public class AndroidModule {
     private BragiApplication application;

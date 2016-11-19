@@ -5,6 +5,7 @@ package com.mirhoseini.bragi.domain.model;
  */
 
 public class DataModel {
+
     Sections section;
     Items item;
     boolean isChecked;

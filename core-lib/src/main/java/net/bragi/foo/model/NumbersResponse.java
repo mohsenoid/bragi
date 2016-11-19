@@ -1,4 +1,4 @@
-package com.mirhoseini.bragi.domain;
+package net.bragi.foo.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
