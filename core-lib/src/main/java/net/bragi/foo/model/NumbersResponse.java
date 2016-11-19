@@ -16,6 +16,10 @@ public class NumbersResponse {
     @Expose
     private List<Integer> numbers = new ArrayList<>();
 
+    public NumbersResponse(List<Integer> numbers) {
+        this.numbers = numbers;
+    }
+
     public List<Integer> getNumbers() {
         return numbers;
     }
