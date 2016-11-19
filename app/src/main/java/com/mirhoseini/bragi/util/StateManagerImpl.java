@@ -15,7 +15,7 @@ import javax.inject.Inject;
  */
 public class StateManagerImpl implements StateManager {
 
-    private Context context;
+    private final Context context;
 
     @Inject
     public StateManagerImpl(Context context) {

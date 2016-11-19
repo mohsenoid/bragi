@@ -9,8 +9,8 @@ package com.mirhoseini.bragi.numbers.adapter.model;
  */
 public class NumberRecord {
 
-    RecordTypes recordType;
-    Number number;
+    private final RecordTypes recordType;
+    private final Number number;
 
     public NumberRecord(RecordTypes recordType, Number number) {
         this.recordType = recordType;
@@ -28,7 +28,7 @@ public class NumberRecord {
     public enum RecordTypes {
         HEADER(0), ITEM(1);
 
-        private int value;
+        private final int value;
 
         RecordTypes(int value) {
             this.value = value;

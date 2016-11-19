@@ -10,7 +10,7 @@ import com.mirhoseini.bragi.domain.model.Sections;
  * Model which holds Headers row values
  */
 public class NumberHeader extends Number {
-    Sections section;
+    private final Sections section;
 
     public NumberHeader(Sections section) {
         this.section = section;

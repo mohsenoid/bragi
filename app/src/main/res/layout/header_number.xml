@@ -14,7 +14,10 @@
         android:id="@+id/section"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp"
+        android:paddingBottom="@dimen/text_padding"
+        android:paddingLeft="@dimen/keyLine1"
+        android:paddingRight="@dimen/keyLine1"
+        android:paddingTop="@dimen/text_padding"
         android:text="@{String.valueOf(header.section)}"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         tools:text="Section name" />

@@ -7,8 +7,8 @@ package com.mirhoseini.bragi.domain.model;
 public enum Sections {
     Section1(0, "Section 1"), Section2(1, "Section 2"), Section3(2, "Section 3"), Section4(3, "Section 4");
 
-    private int value;
-    private String name;
+    private final int value;
+    private final String name;
 
     Sections(int value, String name) {
         this.value = value;

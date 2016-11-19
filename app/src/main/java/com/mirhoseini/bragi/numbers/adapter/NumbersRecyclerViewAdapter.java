@@ -27,7 +27,7 @@ public class NumbersRecyclerViewAdapter extends RecyclerView.Adapter<NumbersView
 
     private ArrayList<NumberRecord> records = new ArrayList<>();
 
-    private PublishSubject<Number> notify = PublishSubject.create();
+    private final PublishSubject<Number> notify = PublishSubject.create();
 
     @Inject
     public NumbersRecyclerViewAdapter() {

@@ -19,8 +19,8 @@ import rx.subjects.ReplaySubject;
 @Numbers
 class NumbersInteractorImpl implements NumbersInteractor {
 
-    private BragiApi api;
-    private SchedulerProvider scheduler;
+    private final BragiApi api;
+    private final SchedulerProvider scheduler;
 
     private ReplaySubject<NumbersResponse> numbersSubject;
     private Subscription numbersSubscription;

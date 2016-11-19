@@ -29,7 +29,7 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity implements BaseView, NumbersFragment.OnListFragmentInteractionListener {
 
-    public static final String TAG_NUMBERS_FRAGMENT = "numbers_fragment";
+    static final String TAG_NUMBERS_FRAGMENT = "numbers_fragment";
 
     // injecting dependencies via Dagger
     @Inject

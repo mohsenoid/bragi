@@ -49,7 +49,7 @@ public class NumbersFragment extends BaseFragment implements NumbersView {
     @BindView(R.id.empty)
     ViewGroup empty;
 
-    private CompositeSubscription subscriptions = new CompositeSubscription();
+    private final CompositeSubscription subscriptions = new CompositeSubscription();
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the

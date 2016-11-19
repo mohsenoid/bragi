@@ -10,8 +10,8 @@ import com.mirhoseini.bragi.domain.model.Items;
  * Model which holds Items row values
  */
 public class NumberItem extends Number {
-    Items item;
-    boolean isChecked;
+    private final Items item;
+    private final boolean isChecked;
 
     public NumberItem(Items item, boolean isChecked) {
         this.item = item;

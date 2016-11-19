@@ -16,10 +16,10 @@ import dagger.Provides;
  * Module which provide Android objects required during whole application lifecycle
  */
 @Module
-public class AndroidModule {
-    private BragiApplication application;
+class AndroidModule {
+    private final BragiApplication application;
 
-    public AndroidModule(BragiApplication application) {
+    AndroidModule(BragiApplication application) {
         this.application = application;
     }
 

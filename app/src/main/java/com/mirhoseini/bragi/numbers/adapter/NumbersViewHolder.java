@@ -16,14 +16,14 @@ import com.mirhoseini.bragi.numbers.adapter.model.NumberRecord;
  * Created by Mohsen on 18/11/2016.
  */
 
-public class NumbersViewHolder extends RecyclerView.ViewHolder {
+class NumbersViewHolder extends RecyclerView.ViewHolder {
 
-    public final View view;
+    private final View view;
     private Number number;
-    private ViewDataBinding binding;
-    private NumberRecord.RecordTypes recordType;
+    private final ViewDataBinding binding;
+    private final NumberRecord.RecordTypes recordType;
 
-    public NumbersViewHolder(View view, NumberRecord.RecordTypes recordType) {
+    private NumbersViewHolder(View view, NumberRecord.RecordTypes recordType) {
         super(view);
         this.view = view;
         this.recordType = recordType;
@@ -36,7 +36,7 @@ public class NumbersViewHolder extends RecyclerView.ViewHolder {
      *
      * @param parent     parent {@link ViewGroup}
      * @param recordType record type {@link com.mirhoseini.bragi.numbers.adapter.model.NumberRecord.RecordTypes}
-     * @return
+     * @return Numbers ViewHolder
      */
     static NumbersViewHolder makeViewHolder(ViewGroup parent, NumberRecord.RecordTypes recordType) {
         View view = getLayoutView(parent, recordType);
@@ -48,13 +48,12 @@ public class NumbersViewHolder extends RecyclerView.ViewHolder {
      *
      * @param parent     parent {@link ViewGroup}
      * @param recordType record type {@link com.mirhoseini.bragi.numbers.adapter.model.NumberRecord.RecordTypes}
-     * @return
+     * @return Layout View
      */
-    static View getLayoutView(ViewGroup parent, NumberRecord.RecordTypes recordType) {
+    private static View getLayoutView(ViewGroup parent, NumberRecord.RecordTypes recordType) {
         int layoutId = getLayoutId(recordType);
-        return LayoutInflater.from(parent.getContext()).inflate(layoutId, null);
+        return LayoutInflater.from(parent.getContext()).inflate(layoutId, parent, false);
     }
-
 
     /**
      * return layout id according to {@link com.mirhoseini.bragi.numbers.adapter.model.NumberRecord.RecordTypes}
@@ -62,7 +61,7 @@ public class NumbersViewHolder extends RecyclerView.ViewHolder {
      * @param recordType record type {@link com.mirhoseini.bragi.numbers.adapter.model.NumberRecord.RecordTypes}
      * @return layout id
      */
-    static int getLayoutId(NumberRecord.RecordTypes recordType) {
+    private static int getLayoutId(NumberRecord.RecordTypes recordType) {
         switch (recordType) {
             case HEADER:
                 return R.layout.header_number;
