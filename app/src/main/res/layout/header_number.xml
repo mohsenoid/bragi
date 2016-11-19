@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="header"
+            type="com.mirhoseini.bragi.numbers.adapter.model.NumberHeader" />
+
+    </data>
+
+    <TextView
+        android:id="@+id/section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="@{String.valueOf(header.section)}"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        tools:text="Section name" />
+
+</layout>

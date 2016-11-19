@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Bragi</string>
+    <string name="no_data">No data available</string>
+    <string name="main_title">Bragi</string>
+    <string name="offline_message">No internet connection, Offline data!</string>
+    <string name="go_online">Go Online</string>
+    <string name="retry_message">An error happened</string>
+    <string name="retry">Retry</string>
+    <string name="please_wait">Loading data, please wait…</string>
 </resources>

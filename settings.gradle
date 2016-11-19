@@ -1,1 +1,3 @@
-include ':app'
+include ':bragi-app', ':bragi-core'
+project(':bragi-app').projectDir = new File('app')
+project(':bragi-core').projectDir = new File('core-lib')
