@@ -1,0 +1,38 @@
+language: android
+
+sudo: required
+
+jdk:
+  - oraclejdk8
+
+env:
+  global:
+    - ANDROID_API_LEVEL=25
+    - ANDROID_BUILD_TOOLS_VERSION=25.0.0
+
+android:
+  components:
+    - tools
+    - platform-tools
+    - build-tools-$ANDROID_BUILD_TOOLS_VERSION
+    - android-$ANDROID_API_LEVEL
+    - addon-google_apis-google-$ANDROID_API_LEVEL
+    - extra-google-google_play_services
+    - extra-google-m2repository
+    - extra-google-google_play_services
+    - extra-android-m2repository
+    - extra-android-support
+    - sys-img-armeabi-v7a-google_apis-21
+  licenses:
+    - '.+'
+
+before_install:
+  - echo y | sudo apt-get update
+  - echo y | sudo apt-get install openjdk-7-jre
+  - export JAVA7_HOME=/usr/lib/jvm/java-7-oracle
+  - export JAVA8_HOME=/usr/lib/jvm/java-8-oracle
+  - export JAVA_HOME=$JAVA8_HOME
+  - chmod +x gradlew
+
+script:
+  - ./gradlew assemble

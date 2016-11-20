@@ -1,0 +1,26 @@
+#
+# Build configuration for Circle CI
+#
+
+machine:
+  java:
+      version: openjdk8
+
+  environment:
+      ANDROID_HOME: /usr/local/android-sdk-linux
+
+dependencies:
+  pre:
+    - echo y | android update sdk --no-ui --all --filter "tools,platform-tools,android-25"
+    - echo y | android update sdk --no-ui --all --filter "build-tools-25.0.0"
+    - echo y | android update sdk --no-ui --all --filter "extra-android-m2repository,extra-google-google_play_services,extra-google-m2repository"
+
+test:
+  override:
+    - (./gradlew assemble):
+        timeout: 360
+
+  post:
+    # copy the build outputs to artifacts
+    - cp -r app/build/outputs/ $CIRCLE_ARTIFACTS
+    - cp -r core-lib/build/libs/ $CIRCLE_ARTIFACTS
