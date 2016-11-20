@@ -1,4 +1,4 @@
-package com.mirhoseini.bragi.support;
+package com.mirhoseini.bragi.test.support;
 
 import android.view.View;
 import android.view.ViewGroup;

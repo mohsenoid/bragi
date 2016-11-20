@@ -1,7 +1,7 @@
 package com.mirhoseini.bragi;
 
 
-import com.mirhoseini.bragi.support.ShadowSnackbar;
+import com.mirhoseini.bragi.test.support.ShadowSnackbar;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -11,9 +11,9 @@ import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 import org.robolectric.shadows.ShadowToast;
 
-import static com.mirhoseini.bragi.support.Assert.assertAlertDialogIsShown;
-import static com.mirhoseini.bragi.support.Assert.assertProgressDialogIsShown;
-import static com.mirhoseini.bragi.support.Assert.assertSnackbarIsShown;
+import static com.mirhoseini.bragi.test.support.Assert.assertAlertDialogIsShown;
+import static com.mirhoseini.bragi.test.support.Assert.assertProgressDialogIsShown;
+import static com.mirhoseini.bragi.test.support.Assert.assertSnackbarIsShown;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertNotNull;
@@ -58,17 +58,10 @@ public class MainActivityRobolectricTest {
         assertAlertDialogIsShown(R.string.utils__no_connection_title, R.string.utils__no_connection);
     }
 
+
     @Test
     public void testShowProgress() throws Exception {
         activity.showProgress();
-
-        assertProgressDialogIsShown(R.string.please_wait);
-    }
-
-    @Test
-    public void testHideProgress() throws Exception {
-        activity.showProgress();
-        activity.hideProgress();
 
         assertProgressDialogIsShown(R.string.please_wait);
     }

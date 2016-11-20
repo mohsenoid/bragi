@@ -30,7 +30,7 @@ import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static com.mirhoseini.bragi.support.Matcher.childAtPosition;
+import static com.mirhoseini.bragi.test.support.Matcher.childAtPosition;
 import static org.hamcrest.Matchers.allOf;
 import static org.mockito.Mockito.when;
 
@@ -41,20 +41,22 @@ import static org.mockito.Mockito.when;
 @RunWith(AndroidJUnit4.class)
 public class MainActivityTest {
 
-    public static final String TEST_SECTION = Sections.Section1.toString();
-    public static final String TEST_ITEM = Items.Item4.toString();
+    private static final String TEST_SECTION = Sections.Section1.toString();
+    private static final String TEST_ITEM = Items.Item4.toString();
     private static final int TEST_NUMBER = 140;
+
+    @Inject
+    BragiApi api;
+
+    private BragiTestApplication application;
+
     @Rule
     public ActivityTestRule<MainActivity> mainActivity = new ActivityTestRule<>(
             MainActivity.class,
             true,
             // false: do not launch the activity immediately
             false);
-    NumbersResponse expectedResult;
-
-    @Inject
-    BragiApi api;
-    private BragiTestApplication application;
+    private NumbersResponse expectedResult;
 
     @Before
     public void setUp() {

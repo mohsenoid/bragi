@@ -83,14 +83,14 @@ public class ApplicationModule {
 
     @Provides
     @Singleton
-    public StateManager provideStateManager(StateManagerImpl stateManager) {
+    StateManager provideStateManager(StateManagerImpl stateManager) {
         return stateManager;
     }
 
     @Provides
     @Singleton
     @Named("retryCount")
-    public int provideApiRetryCount() {
+    int provideApiRetryCount() {
         return AppConstants.API_RETRY_COUNT;
     }
 }

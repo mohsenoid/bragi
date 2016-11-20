@@ -5,6 +5,7 @@ import android.support.v7.widget.LinearLayoutManager;
 
 import dagger.Module;
 import dagger.Provides;
+import rx.subscriptions.CompositeSubscription;
 
 /**
  * Created by Mohsen on 18/11/2016.
@@ -32,13 +33,19 @@ public class AppNumbersModule extends NumbersModule {
     }
 
     @Provides
-    @Numbers
+    @NumbersScope
+    CompositeSubscription provideCompositeSubscription(){
+        return new CompositeSubscription();
+    }
+
+    @Provides
+    @NumbersScope
     NumbersFragment.OnListFragmentInteractionListener provideOnListFragmentInteractionListener() {
         return listener;
     }
 
     @Provides
-    @Numbers
+    @NumbersScope
     public LinearLayoutManager provideLayoutManager() {
         return new LinearLayoutManager(context);
     }

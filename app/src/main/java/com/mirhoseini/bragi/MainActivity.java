@@ -123,6 +123,7 @@ public class MainActivity extends BaseActivity implements BaseView, NumbersFragm
 
     @Override
     public void showData(Number number) {
+        // this event can cause opening data details in new activity
         showMessage(number.toString());
     }
 }

@@ -9,7 +9,7 @@ import dagger.Subcomponent;
 /**
  * Application SubComponent which inject {@link com.mirhoseini.bragi.ApplicationModule} and {@link AppNumbersModule} members into {@link NumbersFragment}
  */
-@Numbers
+@NumbersScope
 @Subcomponent(modules = {
         AppNumbersModule.class
 })

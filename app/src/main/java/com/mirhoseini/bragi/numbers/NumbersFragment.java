@@ -31,18 +31,20 @@ import rx.subscriptions.CompositeSubscription;
 
 public class NumbersFragment extends BaseFragment implements NumbersView {
 
-    private final CompositeSubscription subscriptions = new CompositeSubscription();
     // injecting dependencies via Dagger
     @Inject
-    NumbersPresenter presenter;
-    @Inject
     Context context;
+    @Inject
+    NumbersPresenter presenter;
     @Inject
     LinearLayoutManager layoutManager;
     @Inject
     NumbersRecyclerViewAdapter adapter;
     @Inject
     OnListFragmentInteractionListener listener;
+    @Inject
+    CompositeSubscription subscriptions;
+
     // injecting views via ButterKnife
     @BindView(R.id.list)
     RecyclerView list;

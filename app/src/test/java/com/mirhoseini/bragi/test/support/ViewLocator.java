@@ -1,4 +1,4 @@
-package com.mirhoseini.bragi.support;
+package com.mirhoseini.bragi.test.support;
 
 import android.app.Activity;
 import android.support.annotation.IdRes;

@@ -16,7 +16,7 @@ import rx.subjects.ReplaySubject;
  * Created by Mohsen on 18/11/2016.
  */
 
-@Numbers
+@NumbersScope
 class NumbersInteractorImpl implements NumbersInteractor {
 
     private final BragiApi api;

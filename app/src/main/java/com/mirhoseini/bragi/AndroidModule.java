@@ -1,5 +1,6 @@
 package com.mirhoseini.bragi;
 
+import android.app.Application;
 import android.content.Context;
 import android.content.res.Resources;
 
@@ -21,6 +22,12 @@ class AndroidModule {
 
     AndroidModule(BragiApplication application) {
         this.application = application;
+    }
+
+    @Provides
+    @Singleton
+    BragiApplication provideBragiApplication() {
+        return application;
     }
 
     @Provides

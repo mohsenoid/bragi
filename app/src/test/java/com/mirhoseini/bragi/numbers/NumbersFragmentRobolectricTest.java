@@ -2,7 +2,7 @@ package com.mirhoseini.bragi.numbers;
 
 import com.mirhoseini.bragi.BuildConfig;
 import com.mirhoseini.bragi.MainActivity;
-import com.mirhoseini.bragi.support.ShadowSnackbar;
+import com.mirhoseini.bragi.test.support.ShadowSnackbar;
 
 import org.junit.Before;
 import org.junit.Test;

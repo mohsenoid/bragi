@@ -25,13 +25,13 @@ class NumbersModule {
     }
 
     @Provides
-    @Numbers
+    @NumbersScope
     public NumbersInteractor provideInteractor(NumbersInteractorImpl interactor) {
         return interactor;
     }
 
     @Provides
-    @Numbers
+    @NumbersScope
     public NumbersPresenter providePresenter(NumbersPresenterImpl presenter) {
         presenter.bind(view);
         return presenter;

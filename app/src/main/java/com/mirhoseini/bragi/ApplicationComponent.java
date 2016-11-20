@@ -28,4 +28,5 @@ public interface ApplicationComponent {
     void inject(MainActivity activity);
 
     NumbersSubComponent plus(AppNumbersModule module);
+
 }

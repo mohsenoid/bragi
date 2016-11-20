@@ -1,4 +1,4 @@
-package com.mirhoseini.bragi.support;
+package com.mirhoseini.bragi.test.support;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -9,7 +9,7 @@ import android.view.View;
 import org.robolectric.shadows.ShadowAlertDialog;
 import org.robolectric.shadows.ShadowProgressDialog;
 
-import static com.mirhoseini.bragi.support.ResourceLocator.getString;
+import static com.mirhoseini.bragi.test.support.ResourceLocator.getString;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.hamcrest.core.IsNot.not;

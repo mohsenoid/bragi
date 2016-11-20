@@ -1,4 +1,4 @@
-package com.mirhoseini.bragi.support;
+package com.mirhoseini.bragi.test.support;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
