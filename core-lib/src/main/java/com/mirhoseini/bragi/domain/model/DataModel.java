@@ -10,10 +10,10 @@ public class DataModel {
     private final Items item;
     private final boolean isChecked;
 
-    public DataModel(int number) {
-        section = Sections.fromValue(number & 0x3);
-        item = Items.fromValue((number >> 2) & 0x1F);
-        isChecked = ((number >> 7) & 0x1) == 1;
+    public DataModel(Sections section, Items item, boolean isChecked) {
+        this.section = section;
+        this.item = item;
+        this.isChecked = isChecked;
     }
 
     public Sections getSection() {

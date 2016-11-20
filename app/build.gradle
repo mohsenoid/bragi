@@ -80,7 +80,6 @@ dependencies {
     compile rootProject.ext.libraries.designSupport
     compile rootProject.ext.libraries.vectorSupport
     compile rootProject.ext.libraries.recyclerView
-    compile rootProject.ext.libraries.cardView
 
     compile rootProject.ext.libraries.rxandroid
 

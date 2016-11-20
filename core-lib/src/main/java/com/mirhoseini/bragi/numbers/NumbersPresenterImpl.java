@@ -1,6 +1,7 @@
 package com.mirhoseini.bragi.numbers;
 
 import com.mirhoseini.bragi.domain.model.DataModel;
+import com.mirhoseini.bragi.util.NumbersInterpreter;
 import com.mirhoseini.bragi.util.SchedulerProvider;
 
 import net.bragi.foo.model.NumbersResponse;
@@ -89,7 +90,7 @@ class NumbersPresenterImpl implements NumbersPresenter {
         List<DataModel> dataModel = new ArrayList<>();
 
         for (Integer number : numbersResponse.getNumbers()) {
-            dataModel.add(new DataModel(number));
+            dataModel.add(NumbersInterpreter.interpret(number));
         }
 
         return dataModel;

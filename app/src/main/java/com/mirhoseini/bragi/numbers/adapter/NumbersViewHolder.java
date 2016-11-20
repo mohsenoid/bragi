@@ -19,9 +19,9 @@ import com.mirhoseini.bragi.numbers.adapter.model.NumberRecord;
 class NumbersViewHolder extends RecyclerView.ViewHolder {
 
     private final View view;
-    private Number number;
     private final ViewDataBinding binding;
     private final NumberRecord.RecordTypes recordType;
+    private Number number;
 
     private NumbersViewHolder(View view, NumberRecord.RecordTypes recordType) {
         super(view);

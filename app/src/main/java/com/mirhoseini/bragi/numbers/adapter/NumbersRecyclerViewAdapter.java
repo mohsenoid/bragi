@@ -25,9 +25,8 @@ import rx.subjects.PublishSubject;
 
 public class NumbersRecyclerViewAdapter extends RecyclerView.Adapter<NumbersViewHolder> {
 
-    private ArrayList<NumberRecord> records = new ArrayList<>();
-
     private final PublishSubject<Number> notify = PublishSubject.create();
+    private ArrayList<NumberRecord> records = new ArrayList<>();
 
     @Inject
     public NumbersRecyclerViewAdapter() {

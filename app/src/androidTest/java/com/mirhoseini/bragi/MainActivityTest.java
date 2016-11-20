@@ -6,7 +6,6 @@ import android.support.test.InstrumentationRegistry;
 import android.support.test.espresso.ViewInteraction;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
-import android.view.View;
 
 import com.mirhoseini.bragi.domain.client.BragiApi;
 import com.mirhoseini.bragi.domain.model.Items;
@@ -42,23 +41,20 @@ import static org.mockito.Mockito.when;
 @RunWith(AndroidJUnit4.class)
 public class MainActivityTest {
 
-    private static final int TEST_NUMBER = 140;
     public static final String TEST_SECTION = Sections.Section1.toString();
     public static final String TEST_ITEM = Items.Item4.toString();
-
-    private BragiTestApplication application;
-
-    NumbersResponse expectedResult;
-
-    @Inject
-    BragiApi api;
-
+    private static final int TEST_NUMBER = 140;
     @Rule
     public ActivityTestRule<MainActivity> mainActivity = new ActivityTestRule<>(
             MainActivity.class,
             true,
             // false: do not launch the activity immediately
             false);
+    NumbersResponse expectedResult;
+
+    @Inject
+    BragiApi api;
+    private BragiTestApplication application;
 
     @Before
     public void setUp() {
@@ -73,7 +69,7 @@ public class MainActivityTest {
         ArrayList<Integer> numbers = new ArrayList<>();
         numbers.add(TEST_NUMBER);
 
-        // put the test character in a test api result
+        // put the test data in a test api result
         expectedResult = new NumbersResponse(numbers);
 
         // Set up the mock

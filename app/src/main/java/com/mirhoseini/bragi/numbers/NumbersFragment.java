@@ -31,6 +31,7 @@ import rx.subscriptions.CompositeSubscription;
 
 public class NumbersFragment extends BaseFragment implements NumbersView {
 
+    private final CompositeSubscription subscriptions = new CompositeSubscription();
     // injecting dependencies via Dagger
     @Inject
     NumbersPresenter presenter;
@@ -42,14 +43,11 @@ public class NumbersFragment extends BaseFragment implements NumbersView {
     NumbersRecyclerViewAdapter adapter;
     @Inject
     OnListFragmentInteractionListener listener;
-
     // injecting views via ButterKnife
     @BindView(R.id.list)
     RecyclerView list;
     @BindView(R.id.empty)
     ViewGroup empty;
-
-    private final CompositeSubscription subscriptions = new CompositeSubscription();
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
